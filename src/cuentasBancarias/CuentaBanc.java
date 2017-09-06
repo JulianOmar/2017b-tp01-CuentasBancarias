@@ -5,14 +5,30 @@ public class CuentaBanc {
 	public int nCuenta;
 	public int saldo;
 	
-	
-	
-	
 	public CuentaBanc(int c,int s) {
 		nCuenta=c;
 		saldo=s;
 	}
 
+	/*cuentaOrigen.transferirMontoHacia(monto, cuentaDestino);*/
+	public int transferirMontoHacia(int monto,CuentaBanc cc)
+	{
+		
+		cc.saldo+=monto;
+		this.saldo-=monto;
+		return 1;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/// "String" para salida por consola
 	public int mostrarCta()
 	{
 		return nCuenta;

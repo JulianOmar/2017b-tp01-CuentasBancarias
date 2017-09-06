@@ -1,6 +1,8 @@
 package cuentasBancarias;
 
+/* EL USO DE MAIN ES INECESARIO PARA ESTE PROYCTO*/
 public class Main {
+	
 
 	public static void main(String[] args) {
 
