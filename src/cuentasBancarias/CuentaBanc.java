@@ -15,8 +15,11 @@ public class CuentaBanc {
 	{
 		if(monto <0)
 			return -1;
+		if(this.nCuenta != cc.nCuenta)
+		{
 		cc.saldo+=monto;
 		this.saldo-=monto;
+		}
 		return 1;
 	}
 	
