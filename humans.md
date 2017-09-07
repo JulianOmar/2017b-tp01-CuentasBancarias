@@ -7,5 +7,5 @@
 
 ## Estudiantes
 
-* XXX ([xxx](https://github.com/xxx))
+* Julian Meza ([JulianOmar](https://github.com/JulianOmar))
 * XXX ([xxx](https://github.com/xxx))
