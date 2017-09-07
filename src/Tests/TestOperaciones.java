@@ -21,7 +21,7 @@ public class TestOperaciones {
 		CuentaBanc a=new CuentaBanc(123,525);
 		CuentaBanc b=new CuentaBanc(124,100);//cuenta de destino
 		
-		Assert.assertEquals(1, a.transferirMontoHacia(520,a));
+		Assert.assertEquals(-1, a.transferirMontoHacia(526,b));
 		
 				
 	}
