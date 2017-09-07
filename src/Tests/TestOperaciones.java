@@ -20,10 +20,10 @@ public class TestOperaciones {
 	public void testDePrueba() {
 		CuentaBanc a=new CuentaBanc(123,525);
 		CuentaBanc b=new CuentaBanc(124,100);//cuenta de destino
-		Assert.assertEquals(1, a.transferirMontoHacia(520,b));
 		
+		Assert.assertEquals(0, a.transferirMontoHacia(-520,b));
 		
-		
+				
 	}
 
 }
