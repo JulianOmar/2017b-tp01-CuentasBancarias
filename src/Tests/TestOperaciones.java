@@ -46,5 +46,11 @@ public class TestOperaciones {
 	public void testMontoIgualASaldo() {
 		Assert.assertEquals(1, cuentaB.transferirMontoHacia(100, cuentaA));
 	}
+	
+	@Test
+	public void testMontoDecimal() {
+		cuentaA.transferirMontoHacia(55.5, cuentaB);
+		Assert.assertEquals(155.5, cuentaB.transferirMontoHacia(100, cuentaA), 0.0000001);
+	}
 
 }
