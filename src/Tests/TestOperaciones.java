@@ -4,43 +4,53 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import cuentasBancarias.CuentaBanc;
+import cuentasBancarias.CuentaBancaria;
 
 public class TestOperaciones {
 
-	
-	  CuentaBanc a;
-	  CuentaBanc b;
+	CuentaBancaria cuentaA;
+	CuentaBancaria cuentaB;
 	  
-	  @Before 
-	  public void setUp() { 
-		  a=new CuentaBanc(123,525);
-		  b=new CuentaBanc(124,100);//cuenta de destino 
-	  }
+	@Before
+	public void setUp() { 
+		cuentaA=new CuentaBancaria(123, 525);
+		cuentaB=new CuentaBancaria(124, 100); //cuenta de destino 
+	}
 	 
 	@Test
 	public void testDePrueba() {
-		Assert.assertEquals(1, a.transferirMontoHacia(520,b));
-		
-		System.out.println("A.Cuenta: "+a.mostrarCta()+"\tSaldo: "+a.mostrarSdo());
-		System.out.println("B.Cuenta: "+b.mostrarCta()+"\tSaldo: "+b.mostrarSdo());
-				
+		Assert.assertEquals(1, cuentaA.transferirMontoHacia(520, cuentaB));	
 	}
 	
 	@Test
 	public void testSaldoNegativo() {
-		
-		Assert.assertEquals(-1, a.transferirMontoHacia(-520,b));
+		Assert.assertEquals(-1, cuentaA.transferirMontoHacia(-520, cuentaB));
 	}
 	
 	@Test
 	public void testAutoTrans() {
-		Assert.assertEquals(-1, a.transferirMontoHacia(520,a));
+		Assert.assertEquals(-1, cuentaA.transferirMontoHacia(520, cuentaA));
 	}
 	
 	@Test
 	public void testSaldoMenor() {
-		Assert.assertEquals(-1, a.transferirMontoHacia(526,b));
+		Assert.assertEquals(-1, cuentaA.transferirMontoHacia(526, cuentaB));
+	}
+	
+	@Test
+	public void testSaldoCero() {
+		Assert.assertEquals(-1, cuentaA.transferirMontoHacia(0, cuentaB));
+	}
+	
+	@Test
+	public void testMontoIgualASaldo() {
+		Assert.assertEquals(1, cuentaB.transferirMontoHacia(100, cuentaA));
+	}
+	
+	@Test
+	public void testMontoDecimal() {
+		cuentaA.transferirMontoHacia(55.5, cuentaB);
+		Assert.assertEquals(155.5, cuentaB.obtenerSaldo(), 0.0000001);
 	}
 
 }

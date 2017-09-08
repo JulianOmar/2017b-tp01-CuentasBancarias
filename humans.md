@@ -8,4 +8,4 @@
 ## Estudiantes
 
 * Julian Meza ([JulianOmar](https://github.com/JulianOmar))
-* XXX ([xxx](https://github.com/xxx))
+* Santiago Tamashiro ([Ta-ma](https://github.com/Ta-ma))
