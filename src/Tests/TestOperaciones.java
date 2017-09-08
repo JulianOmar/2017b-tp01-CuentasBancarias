@@ -42,5 +42,10 @@ public class TestOperaciones {
 	public void testSaldoMenor() {
 		Assert.assertEquals(-1, a.transferirMontoHacia(526,b));
 	}
+	
+	@Test
+	public void testSaldoCero() {
+		Assert.assertEquals(-1, a.transferirMontoHacia(0,b));
+	}
 
 }
