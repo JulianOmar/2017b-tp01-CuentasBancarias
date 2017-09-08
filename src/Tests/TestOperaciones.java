@@ -46,5 +46,10 @@ public class TestOperaciones {
 	public void testSaldoCero() {
 		Assert.assertEquals(-1, a.transferirMontoHacia(0,b));
 	}
+	
+	@Test
+	public void testMontoIgualASaldo() {
+		Assert.assertEquals(1, b.transferirMontoHacia(100,a));
+	}
 
 }
