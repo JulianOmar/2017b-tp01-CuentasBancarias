@@ -2,16 +2,16 @@ package cuentasBancarias;
 
 public class CuentaBancaria {
 	
-	public int nCuenta;
-	public int saldo;
+	public double nCuenta;
+	public double saldo;
 	
-	public CuentaBancaria(int c, int s) {
+	public CuentaBancaria(double c, double s) {
 		nCuenta=c;
 		saldo=s;
 	}
 
 	/*cuentaOrigen.transferirMontoHacia(monto, cuentaDestino);*/
-	public int transferirMontoHacia(int monto, CuentaBancaria cc)
+	public int transferirMontoHacia(double monto, CuentaBancaria cc)
 	{
 		if(monto > 0 && this.saldo >= monto && this.nCuenta != cc.nCuenta)
 		{
@@ -21,6 +21,11 @@ public class CuentaBancaria {
 		}
 		
 		return -1;
+	}
+	
+	public double obtenerSaldo ()
+	{
+		return saldo;
 	}
 
 }
