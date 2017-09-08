@@ -8,15 +8,14 @@ import cuentasBancarias.CuentaBanc;
 
 public class TestOperaciones {
 
-	
-	  CuentaBanc a;
-	  CuentaBanc b;
+	CuentaBanc a;
+	CuentaBanc b;
 	  
-	  @Before 
-	  public void setUp() { 
-		  a=new CuentaBanc(123,525);
-		  b=new CuentaBanc(124,100);//cuenta de destino 
-	  }
+	@Before 
+	public void setUp() { 
+		a=new CuentaBanc(123,525);
+		b=new CuentaBanc(124,100);//cuenta de destino 
+	}
 	 
 	@Test
 	public void testDePrueba() {
